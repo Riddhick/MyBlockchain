@@ -10,11 +10,12 @@ int main()
     Blockchain MyCoin;
     TransctionData newData;
     time_t currTime;
-    newData.senderkey="riddhick";
-    newData.receiverKey="suchetan";
+    newData.senderkey="sender1";
+    newData.receiverKey="receiver1";
     newData.timestamp=time(&currTime);
 
     MyCoin.addBlock(newData);
+
 
     MyCoin.printChain();
 }
