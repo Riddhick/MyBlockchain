@@ -1,4 +1,10 @@
-#include "block.h"
+#include"block.h"
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace  std;
 
 block::block(int index, TransctionData d, size_t prevHash)
 {

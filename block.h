@@ -1,7 +1,10 @@
-#pragma once
-#include <iostream>
+#ifndef Block_h
+#define Block_h
+#include <ctime>
 #include <string>
-#include<ctime>
+
+
+
 using namespace std;
 
 struct TransctionData{
@@ -24,3 +27,5 @@ class block{
     size_t getPreviousHash();
     bool isValidHash();
 };
+
+#endif

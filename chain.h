@@ -1,8 +1,9 @@
-#pragma once
-#include <iostream>
-#include <string>
+#ifndef Blockchain_h
+#define Blockchain_h
+#include"block.h"
+
 #include<vector>
-#include "block.h"
+
 using namespace std;
 
 class Blockchain{
@@ -17,8 +18,13 @@ class Blockchain{
     void addBlock(TransctionData data);
     bool isChainVaild();
 
+    void printChain();
+
 
     //for testing 
     block *getLatestBlock();
 
 };
+
+
+#endif

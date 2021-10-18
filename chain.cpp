@@ -1,5 +1,12 @@
 #include "chain.h"
 
+#include <iostream>
+#include <string>
+#include<vector>
+#include<ctime>
+#include "block.h"
+
+using namespace std;
 
 Blockchain::Blockchain()
 {
@@ -56,4 +63,20 @@ bool Blockchain::isChainVaild()
         }
     }
     return true;
+}
+
+void Blockchain::printChain()
+{
+    vector<block>::iterator it;
+    int chaiLength=(int)chain.size();
+
+    for(it=chain.begin();it!=chain.end();it++)
+    {
+        block currentBlock=*it;
+        printf("\n Sender:%s",currentBlock.data.senderkey);
+        printf("\n Receiver:%s",currentBlock.data.receiverKey);
+        printf("\n Time:%ld",currentBlock.data.timestamp);
+        printf("\n Block Hash:%zu",currentBlock.getHash());
+        printf("\n Previous Block Hash:%zu",currentBlock.getPreviousHash());
+    }
 }
