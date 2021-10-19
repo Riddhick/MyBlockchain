@@ -57,6 +57,7 @@ void Blockchain::addBlock(TransctionData data)
 {
     int index=(int)chain.size()-1;
     block newblock(index,data,getLatestBlock()->getHash());
+    chain.push_back(newblock);
 }
 
 bool Blockchain::isChainVaild()
